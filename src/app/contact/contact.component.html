@@ -1,41 +1,81 @@
-<!-- contact.component.html -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">Contact Me</h2>
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="p-4 border rounded shadow-sm">
+<div class="container contact-section py-5">
+  <div class="text-center mb-5">
+    <div class="badge badge-glass mb-3"><i class="bi bi-envelope-open text-info"></i> Connect</div>
+    <h2 class="fw-bold">Get In Touch</h2>
+  </div>
 
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text"
-             id="name"
-             class="form-control"
-             [(ngModel)]="contactData.name"
-             name="name"
-             required>
+  <div class="row g-5">
+    <!-- Left Column: Info boxes -->
+    <div class="col-lg-5">
+      <div class="d-flex flex-column gap-4 h-100">
+        <!-- Box 1 -->
+        <div class="contact-info-box">
+          <div class="info-icon-wrapper">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">Email Me</h5>
+          <p class="mb-0">
+            <a href="mailto:ravi&#64;example.com" class="info-link">ravi&#64;example.com</a>
+          </p>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="contact-info-box">
+          <div class="info-icon-wrapper" style="color: #25d366; background: rgba(37, 211, 102, 0.05);">
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">WhatsApp</h5>
+          <p class="mb-0">
+            <a href="https://wa.me/919999999999" target="_blank" class="info-link">Chat on WhatsApp</a>
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="email"
-             id="email"
-             class="form-control"
-             [(ngModel)]="contactData.email"
-             name="email"
-             required>   
+    <!-- Right Column: Form -->
+    <div class="col-lg-7">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-card p-4 p-md-5">
+        <h4 class="fw-bold text-white mb-4">Send a Message</h4>
+
+        <div class="mb-4">
+          <label for="name" class="form-label text-secondary-color fw-semibold">Your Name</label>
+          <input type="text"
+                 id="name"
+                 class="form-control form-glass"
+                 [(ngModel)]="contactData.name"
+                 name="name"
+                 placeholder="John Doe"
+                 required>
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="form-label text-secondary-color fw-semibold">Email Address</label>
+          <input type="email"
+                 id="email"
+                 class="form-control form-glass"
+                 [(ngModel)]="contactData.email"
+                 name="email"
+                 placeholder="john@example.com"
+                 required>   
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="form-label text-secondary-color fw-semibold">Message</label>
+          <textarea id="message"
+                    class="form-control form-glass"
+                    rows="5"
+                    [(ngModel)]="contactData.message"
+                    name="message"
+                    placeholder="Project details, goals, or inquiries..."
+                    required></textarea>
+        </div>
+
+        <button type="submit" [disabled]="!contactForm.valid" class="btn-premium w-100 justify-content-center py-3">
+          <i class="bi bi-send-fill"></i> Send Message
+        </button>
+      </form>
     </div>
-
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea id="message"
-                class="form-control"
-                rows="4"
-                [(ngModel)]="contactData.message"
-                name="message"
-                required></textarea>
-    </div>
-
-    <button type="submit" [disabled]="!contactForm.valid" class="btn btn-primary w-100">Send Message</button>
-  </form>
-</div>  
-
+  </div>
+</div>
  
 

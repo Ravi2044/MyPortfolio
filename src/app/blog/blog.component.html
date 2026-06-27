@@ -1,32 +1,39 @@
 
 
-<div class="container mt-4">
-  <h2 class="text-center mb-4">Latest Blogs</h2>
-
-  <div *ngIf="loading" class="text-center">
-    <p>Loading blogs...</p>
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <div class="badge badge-glass mb-3"><i class="bi bi-journal-text text-info"></i> Insights</div>
+    <h2 class="fw-bold">Latest Blogs</h2>
   </div>
 
-  <div class="row" *ngIf="!loading && blogs.length > 0">
-    <div class="col-md-4 mb-4" *ngFor="let blog of blogs">
-      <div class="card shadow-lg border-0 rounded-3 h-100">
-        <div class="card-body">
-          <h5 class="card-title">{{ blog.title }}</h5>
-          <p class="card-text text-muted">
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-3 text-secondary-color">Loading articles...</p>
+  </div>
+
+  <div class="row g-4" *ngIf="!loading && blogs.length > 0">
+    <div class="col-md-6 col-lg-4" *ngFor="let blog of blogs">
+      <div class="card glass-card h-100 border-0 p-0 overflow-hidden">
+        <div class="card-body p-4 d-flex flex-column h-100">
+          <h5 class="card-title fw-bold text-white mb-2">{{ blog.title }}</h5>
+          <div class="text-gradient-gold fw-semibold fs-7 mb-3">
             By {{ blog.author }} | {{ blog.date | date:'mediumDate' }}
-          </p>
-          <p class="card-text">{{ blog.content }}</p>
-        </div>
-        <div class="card-footer bg-transparent border-0 text-end">
-          <button class="btn btn-sm btn-danger" (click)="deleteBlog(blog.id!)">Delete</button>
+          </div>
+          <p class="card-text text-secondary-color flex-grow-1 fs-6 mb-4">{{ blog.content }}</p>
+          <div class="d-flex justify-content-end mt-auto pt-3 border-top border-secondary-subtle">
+            <button class="btn btn-sm btn-outline-danger px-3 rounded-pill" (click)="deleteBlog(blog.id!)">
+              <i class="bi bi-trash-fill"></i> Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <p *ngIf="!loading && blogs.length === 0" class="text-center">
-    No blogs found. Add a new one below!
+  <p *ngIf="!loading && blogs.length === 0" class="text-center text-secondary-color py-5 fs-5">
+    No blogs found. Add a new article to get started!
   </p>
-</div>
- 
+</div> 
 
