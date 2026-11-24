@@ -6,13 +6,14 @@
   --border-hover: rgba(255, 255, 255, 0.15);
   
   --primary-gradient: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  --heading-gradient: linear-gradient(135deg, #79b8ff 0%, #a5a6ff 100%);
   --gold-gradient: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
   --neon-blue: #3b82f6;
   --neon-purple: #4f46e5;
   
   --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-secondary: #b5c2d5;
+  --text-muted: #93a4ba;
   
   --font-main: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'Fira Code', monospace;
@@ -92,7 +93,7 @@ body {
 
 /* Global Typography Utilities */
 .text-gradient {
-  background: var(--primary-gradient);
+  background: var(--heading-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
