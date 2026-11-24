@@ -1,26 +1,63 @@
-<!-- about.component.html -->
 <div class="container about-section py-5">
-  <div class="row align-items-center">
+  <div class="row align-items-center g-5">
     
     <!-- Left Side Image -->
     <div class="col-md-6 text-center">
-      <img src="assets/images/about-us.webp" alt="About Me" class="img-fluid about-img">
+      <div class="about-img-wrapper">
+        <!-- We keep the same source path but apply modern shadow wrapper -->
+        <img src="assets/images/about-us.webp" alt="About Me" class="img-fluid about-img" style="max-width: 400px; object-fit: cover;">
+      </div>
     </div>
 
     <!-- Right Side Text -->
     <div class="col-md-6">
+      <div class="badge badge-glass mb-3"><i class="bi bi-person-fill text-warning"></i> My Story</div>
       <h2 class="fw-bold mb-3">LET'S INTRODUCE ABOUT <br> MYSELF</h2>
-      <p class="text-muted">
-        I am a passionate .NET Developer with extensive experience in building scalable web applications and high-performance APIs. I specialize in the modern Microsoft technology stack, taking complex business requirements and translating them into robust, maintainable architecture.
+      <p class="text-secondary-color mb-3">
+        I am a passionate .NET Developer with 2 years of professional experience in building scalable web applications and clean APIs. I specialize in the modern Microsoft technology stack and modern frontend integrations, translating requirements into maintainable code.
       </p>
-      <p class="text-muted">
-        Whether you need a custom ASP.NET Core backend, a full-stack Angular application, or premium digital boilerplates to jumpstart your own development, I provide reliable and highly optimized solutions tailored to your needs.
+      <p class="text-secondary-color mb-4">
+        Whether you need a custom ASP.NET Core backend, a full-stack Angular application, or support on digital project setups, I provide reliable and highly optimized solutions.
       </p>
       
       <!-- Download Resume Button -->
-      <a href="assets/images/home-banner.png" target="_blank" class="btn btn-primary btn-lg mt-3">
-        DOWNLOAD RESUME
+      <a href="assets/images/home-banner.png" target="_blank" class="btn-premium">
+        <i class="bi bi-file-earmark-pdf"></i> DOWNLOAD RESUME
       </a>
+    </div>
+  </div>
+
+  <!-- Timeline Section -->
+  <div class="timeline-section">
+    <h3 class="text-center fw-bold mb-5">Professional Journey</h3>
+    <div class="timeline-line"></div>
+
+    <!-- Timeline Item 1 -->
+    <div class="timeline-item timeline-item-right">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <div class="timeline-date">2025 - PRESENT</div>
+          <h5 class="fw-bold text-white">Full-Stack Freelance Engineer</h5>
+          <p class="text-secondary-color mb-0 fs-6">
+            Architecting clean APIs and interactive frontend components using ASP.NET Core and Angular. Delivering freelance projects to clients with high quality and focus on detail.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Item 2 -->
+    <div class="timeline-item timeline-item-left">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <div class="timeline-date">2024 - 2025</div>
+          <h5 class="fw-bold text-white">Associate Software Engineer</h5>
+          <p class="text-secondary-color mb-0 fs-6">
+            Developed web services, optimized database queries, and implemented UI controls in Angular. Collaborated on agile teams to ship production-ready updates.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
