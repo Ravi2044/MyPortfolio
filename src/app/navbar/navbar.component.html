@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-glass sticky-top">
   <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand fw-bold text-gradient fs-3" routerLink="/">
+    <a class="navbar-brand fw-bold text-gradient fs-3" routerLink="/" fragment="home" (click)="setActiveSection('home')">
       <i class="bi bi-code-slash"></i> Ravi Saxena
     </a>
 
@@ -13,11 +13,11 @@
     <!-- Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto fw-semibold text-uppercase">
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/about" routerLinkActive="active">About</a></li>
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/skills" routerLinkActive="active">Skills</a></li>
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/projects" routerLinkActive="active">Projects</a></li>
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/" fragment="home" [class.active]="activeSection === 'home'" [attr.aria-current]="activeSection === 'home' ? 'location' : null" (click)="setActiveSection('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/" fragment="about" [class.active]="activeSection === 'about'" [attr.aria-current]="activeSection === 'about' ? 'location' : null" (click)="setActiveSection('about')">About</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/" fragment="skills" [class.active]="activeSection === 'skills'" [attr.aria-current]="activeSection === 'skills' ? 'location' : null" (click)="setActiveSection('skills')">Skills</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/" fragment="projects" [class.active]="activeSection === 'projects'" [attr.aria-current]="activeSection === 'projects' ? 'location' : null" (click)="setActiveSection('projects')">Projects</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/" fragment="contact" [class.active]="activeSection === 'contact'" [attr.aria-current]="activeSection === 'contact' ? 'location' : null" (click)="setActiveSection('contact')">Contact</a></li>
       </ul>
     </div>
   </div>

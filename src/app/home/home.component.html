@@ -1,4 +1,4 @@
-<div class="hero-wrapper py-5">
+<section id="home" class="hero-wrapper page-section py-5" aria-labelledby="home-heading">
   <div class="row align-items-center min-vh-80 g-5">
     <!-- Left content -->
     <div class="col-lg-6 text-center text-lg-start">
@@ -6,7 +6,7 @@
         <i class="bi bi-patch-check-fill text-info"></i> Available for Remote Projects
       </div>
       <h3 class="text-secondary-color fs-5 fw-bold text-uppercase tracking-wider">Expert Software Architect</h3>
-      <h1 class="fw-extrabold display-4 mb-3">
+      <h1 id="home-heading" class="fw-extrabold display-4 mb-3">
         Ravi Saxena <span class="text-gradient">Portfolio</span>
       </h1>
       <h2 class="h4 mb-4 text-secondary-color" style="min-height: 40px;">
@@ -17,10 +17,10 @@
       </p>
       
       <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-4">
-        <a routerLink="/projects" class="btn-premium">
+        <a routerLink="/" fragment="projects" class="btn-premium">
           View Projects <i class="bi bi-arrow-right"></i>
         </a>
-        <a routerLink="/contact" class="btn-premium-outline">
+        <a routerLink="/" fragment="contact" class="btn-premium-outline">
           Hire Me <i class="bi bi-chat-text"></i>
         </a>
       </div>
@@ -65,4 +65,25 @@
       </div>
     </div>
   </div>
-</div>
+
+  <a routerLink="/" fragment="about" class="scroll-next" aria-label="Continue to the About section">
+    <span>Scroll to explore</span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </a>
+</section>
+
+<section id="about" class="page-section content-section" aria-label="About me">
+  <app-about></app-about>
+</section>
+
+<section id="skills" class="page-section content-section" aria-label="Skills">
+  <app-skills></app-skills>
+</section>
+
+<section id="projects" class="page-section content-section" aria-label="Projects">
+  <app-project></app-project>
+</section>
+
+<section id="contact" class="page-section content-section" aria-label="Contact">
+  <app-contact></app-contact>
+</section>

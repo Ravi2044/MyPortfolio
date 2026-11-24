@@ -1,10 +1,20 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { AboutComponent } from '../about/about.component';
+import { SkillsComponent } from '../skills/skills.component';
+import { ProjectComponent } from '../project/project.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [
+    RouterLink,
+    AboutComponent,
+    SkillsComponent,
+    ProjectComponent,
+    ContactComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
